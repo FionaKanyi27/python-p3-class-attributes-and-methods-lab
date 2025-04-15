@@ -23,6 +23,20 @@ class Song:
         def add_to_artists(self):
             if self.artist not in Song.artist:
                 Song.artist.append(self.artist)
-        
 
-    pass
+        def add_to_genres(self):
+            if self.genre not in Song.genres:
+                Song.genres.append(self.genre)
+
+        def add_to_genre_count(self):
+            if self.genre in Song.genre_count:
+                Song.genre_count[self.genre] += 1
+            else:
+                Song.genre_count[self.genre] = 1
+
+        def add_to_artist_count(self):
+            if self.artist in Song.artist_count:
+                Song.artist_count[self.artist] += 1
+            else:
+                Song.artist_count[self.artist] = 1
+        
